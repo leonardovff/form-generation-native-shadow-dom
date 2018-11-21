@@ -1,0 +1,35 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <no-form-field field='{"type": "text", "placeholder": "Login"}'></no-form-field>
+    <form>
+
+    </form>
+    <script src="input.js"></script>
+    <script src="no-form.js"></script>
+    <script>
+      
+      let data = {
+        fields: [
+          {
+            type: "text",
+            placeholder: "Login"
+          },
+          {
+            type: "password",
+            placeholder: "Senha"
+          },
+          {
+            type: "date",
+            placeholder: "Data de nascimento"
+          }
+        ]
+      }
+      
+      let form = run('form', data);
+
+      setInterval(() => { console.log(form.getValue())}, 10000);
+    </script>
+  </body>
+</html>
