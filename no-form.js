@@ -13,6 +13,6 @@ function run(selector, data){
     appDiv.appendChild(field.dom);
   }
   return { 
-    getValue: () => data.fields.map(field => field.value)
+    getValue: () => data.fields.map(field => field.dom.value)
   }
 }

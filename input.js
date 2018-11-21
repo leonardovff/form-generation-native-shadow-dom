@@ -31,11 +31,9 @@ class NoFormField extends HTMLElement {
           field = attr;
         }        
       } catch (e) {
-        console.error(e);
       }
     }
     
-    console.log(field);
     field.value = field.value ? field.value : null;
     this.value = field.value;
     // Create a shadow root
