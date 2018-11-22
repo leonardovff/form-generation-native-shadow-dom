@@ -58,7 +58,7 @@ class NoFormField extends HTMLElement {
 
     field.attr.value = field.attr.value ? field.attr.value : null;
     this.value = field.attr.value;
-
+    if(!field.attr.value) delete field.attr.value;
     let el = this.createElement(field);
     el.addEventListener('input', (e) => this.value = e.target.value);
     

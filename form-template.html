@@ -1,0 +1,68 @@
+<html>
+  <body>
+    <form>
+        <div data-nf-id="login">
+            <h2>Login</h2>
+        </div>
+
+        <div data-nf-id="register">
+            <h2>Register</h2>
+        </div>
+    </form>
+
+    <script src="inputs/field.js"></script>
+    <script src="inputs/textarea.js"></script>
+    <script src="inputs/input.js"></script>
+    <script src="no-form.js"></script>
+
+    <script>
+      
+      let data = {
+        fields: [
+            {
+                tag: "nf-input",
+                root: "login",
+                attr: {
+                    type: "text",
+                    placeholder: "Senha"
+                }
+            },
+            {
+                tag: "nf-input",
+                root: "login",
+                attr: {
+                type: "password",
+                    placeholder: "Senha"
+                }
+            },
+            {
+                tag: "nf-input",
+                register: "register",
+                attr: {
+                    type: 'date'
+                }
+            },
+            {
+                tag: "nf-textarea",
+                register: "register",
+                attr: {
+                    placeholder: 'Descreva você'
+                }
+            },
+            {
+                tag: "nf-input",
+                register: "register",
+                attr: {
+                    type: 'email',
+                    placeholder: 'email'
+                }
+            }
+        ]
+      }
+
+      let form = run('form', data);
+
+      setInterval(() => { console.log(form.getValue())}, 10000);
+    </script>
+  </body>
+</html>
