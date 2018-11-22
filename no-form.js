@@ -1,6 +1,6 @@
 function createElement(field){
   // style and control to create diferrent inputs
-  let el = document.createElement(`no-form-field`);
+  let el = document.createElement(field.tag);
   el.setAttribute('field', JSON.stringify(field));
   return el;
 }

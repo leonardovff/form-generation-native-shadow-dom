@@ -1,34 +1,43 @@
 <html>
-  <head>
-  </head>
+  <head></head>
   <body>
     <!--<div for="field of fiels" class="entry">
-      <field input="field">
+      <no-form-field field="{'tag': 'tag'}">
     </div> -->
-    <no-form-field field='{"type": "text", "placeholder": "Login"}'></no-form-field>
     <form>
     </form>
-    <script src="input.js"></script>
+
+    <script src="inputs/field.js"></script>
+    <script src="inputs/textarea.js"></script>
+    <script src="inputs/input.js"></script>
     <script src="no-form.js"></script>
+
     <script>
       
       let data = {
         fields: [
           {
-            type: "text",
-            placeholder: "Login"
+            tag: "nf-textarea",
+            attr: {
+              placeholder: "Senha"
+            }
           },
           {
-            type: "password",
-            placeholder: "Senha"
+            tag: "nf-input",
+            attr: {
+              type: "password",
+              placeholder: "Senha"
+            }
           },
           {
-            type: "date",
-            placeholder: "Data de nascimento"
+            tag: "nf-input", 
+            attr: {
+              type: 'date'
+            }
           }
         ]
       }
-      
+
       let form = run('form', data);
 
       setInterval(() => { console.log(form.getValue())}, 10000);
